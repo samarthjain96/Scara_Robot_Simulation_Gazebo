@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   urdf
   xacro
+  tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -153,6 +154,16 @@ include_directories(
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
+
+#End_Effector_Broadcaster_Listner
+add_executable(end_effector_listner_node src/end_effector_world_transform.cpp)
+target_link_libraries (end_effector_listner_node ${catkin_LIBRARIES})
+
+
+#Send_Commands
+add_executable(send_commands_node src/send_commands.cpp)
+target_link_libraries (send_commands_node ${catkin_LIBRARIES})
+
 
 #############
 ## Install ##

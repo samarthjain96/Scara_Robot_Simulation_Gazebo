@@ -8,5 +8,12 @@ Command to run the gazebo Simulation
 
 Command to run the Rviz 
     "roslaunch scara_robot rviz.launch"
+
+To send angle commands to the joints use 
+    "rosrun scara_robot send_commands_node"
+
+To see the end effector position  
+    "rosrun scara_robot end_effector_listner_node"
+ 
     
 
